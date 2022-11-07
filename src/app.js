@@ -33,8 +33,12 @@
 // document.write(terneario.validacion())
 // promesa;
 
-import {prueba,prueba2} from "./modulo1";
+/* import {prueba,prueba2} from "./modulo1";
 import {datos} from "./arreglos_texto_limpio";
 datos1();
 prueba();
-prueba2();
+prueba2(); */
+
+import {Consulta} from "./fetch";
+const api = new Consulta();
+api.consulta();
