@@ -1,11 +1,8 @@
 export class Consulta{
-    /* Clase principal */
     constructor(){
 
     }
-    /* metodo que va a realizar el consumo de la API */
     consulta (){
-        /* Consumir  */
         fetch("https://rickandmortyapi.com/api/character")
         .then((respuesta=>respuesta.json()))
         .then((respuesta)=>{
@@ -24,12 +21,11 @@ export class Consulta{
                 console.log(contador);
                 $(`#img${contador}`).html(`${cards1}`);
             }
-            // console.log(respuesta.results[i].image);
-                /* document.write(`<img src="${respuesta.results[i].image}" alt="">`);
+            console.log(respuesta.results[i].image);
+                document.write(`<img src="${respuesta.results[i].image}" alt="">`);
                 document.write(`<h1>${respuesta.results[i].name}</h1>`);
-                document.write(`<h1>${respuesta.results[i].species}</h1>`); */
-            // console.log(respuesta.results.image[]);
-            /* if (respuesta.status == 200) {
+                document.write(`<h1>${respuesta.results[i].species}</h1>`);
+            if (respuesta.status == 200) {
                 console.log("Todo OK");
                 console.log(respuesta.json());
             }
@@ -38,7 +34,7 @@ export class Consulta{
             }
             if(respuesta.status == 500){
                 console.log("Error de servidor");
-            } */
+            }
         })
         .catch()
     }
